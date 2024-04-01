@@ -1,7 +1,6 @@
 import React, { useEffect, useState } from "react";
 import {
   ActivityIndicator,
-  SafeAreaView,
   ScrollView,
   StyleSheet,
   Text,
@@ -14,6 +13,7 @@ import Ticket from "../components/Ticket";
 import { useNavigation } from "@react-navigation/native";
 import { RouteNames } from "../common/constants";
 import { Ionicons } from "@expo/vector-icons";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Search = () => {
   const [from, setFrom] = useState("");
@@ -184,6 +184,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 25,
     marginHorizontal: 25,
+    marginTop: 20,
   },
   formContainer: {
     borderColor: "white",

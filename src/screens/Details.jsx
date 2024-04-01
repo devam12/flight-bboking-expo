@@ -1,14 +1,9 @@
-import {
-  SafeAreaView,
-  StyleSheet,
-  Text,
-  TouchableOpacity,
-  View,
-} from "react-native";
+import { StyleSheet, Text, TouchableOpacity, View } from "react-native";
 import React, { useEffect, useState } from "react";
 import { Card } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
 import { useNavigation } from "@react-navigation/native";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 const Details = ({ route }) => {
   const ticket = route?.params?.props;
@@ -116,6 +111,7 @@ const styles = StyleSheet.create({
     alignItems: "center",
     marginBottom: 25,
     marginHorizontal: 25,
+    marginTop: 20,
   },
   textStyle: {
     marginBottom: 8,
